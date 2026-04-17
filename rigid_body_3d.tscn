@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c17xdo080rful"]
+
+[ext_resource type="Script" uid="uid://crq1tiu1nljfg" path="res://CarForces.cs" id="1_mvxmr"]
+[ext_resource type="PackedScene" uid="uid://dloxxr2fsrx3x" path="res://car.fbx" id="2_n1c64"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mvxmr"]
+radius = 1.9666722
+
+[node name="CarBody" type="RigidBody3D" unique_id=1701098633]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_mvxmr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=679935778]
+shape = SubResource("SphereShape3D_mvxmr")
+
+[node name="car" parent="." unique_id=1281029410 instance=ExtResource("2_n1c64")]
