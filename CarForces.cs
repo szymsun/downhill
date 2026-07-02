@@ -8,11 +8,10 @@ public partial class CarForces : RigidBody3D
     [Export] public int Braking;
     [Export] public int MaxSpeed = 150;
     
+    private Vector3 _appliedForce;
+    private float _throttle;
+    private float _steer;
     
-    public override void _Input(InputEvent @event)
-    {
-        base._Input(@event);
-    }
 
     public override void _PhysicsProcess(double delta)
     {
@@ -20,10 +19,7 @@ public partial class CarForces : RigidBody3D
         LinearVelocity = LinearVelocity.LimitLength(MaxSpeed);
     }
 
-    private Vector3 _appliedForce;
-
-    private float _throttle;
-    private float _steer;
+    
     
     public override void _Process(double delta)
     {

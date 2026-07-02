@@ -20,7 +20,9 @@ size = Vector2(50, 50)
 
 [node name="CarBody" parent="." unique_id=1701098633 instance=ExtResource("1_ia1lp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7266016, 0)
-Acceleration = 65
+Acceleration = 50
+Braking = 100
+MaxSpeed = 70
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1459994696]
 curve = SubResource("Curve3D_6adnx")
@@ -35,7 +37,8 @@ mesh = SubResource("PlaneMesh_ia1lp")
 
 [node name="CameraHandle" type="Node3D" parent="." unique_id=1516793784 node_paths=PackedStringArray("Target")]
 script = ExtResource("2_sasra")
-Offset = Vector3(0, 4.025, 10.7)
 Target = NodePath("../CarBody")
+Interpolation = 0.67
 
 [node name="PlayerCam" type="Camera3D" parent="CameraHandle" unique_id=1080540505]
+transform = Transform3D(1, 0, 0, 0, 0.98230034, 0.18731274, 0, -0.18731274, 0.98230034, 0, 4.8658614, 9.150594)

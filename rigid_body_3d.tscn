@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crq1tiu1nljfg" path="res://CarForces.cs" id="1_mvxmr"]
 [ext_resource type="PackedScene" uid="uid://dloxxr2fsrx3x" path="res://car.fbx" id="2_n1c64"]
+[ext_resource type="PackedScene" uid="uid://cvxnvmx4rsnsy" path="res://carNew.fbx" id="3_j8ugh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mvxmr"]
 radius = 1.9666722
@@ -15,3 +16,7 @@ script = ExtResource("1_mvxmr")
 shape = SubResource("SphereShape3D_mvxmr")
 
 [node name="car" parent="." unique_id=1281029410 instance=ExtResource("2_n1c64")]
+visible = false
+
+[node name="carNew" parent="." unique_id=2070687841 instance=ExtResource("3_j8ugh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
